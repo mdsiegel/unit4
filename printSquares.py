@@ -4,4 +4,8 @@
 
 def printSquares(hight,width):
     print('+--+--+--+--+')
+    print('|  |  |  |  |')
+    print('+--+--+--+--+')
+
+printSquares(1,2)
     
