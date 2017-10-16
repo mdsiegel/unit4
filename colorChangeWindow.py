@@ -29,5 +29,5 @@ def mouseClick(event):
 
 
 App().listenMouseEvent('click', mouseClick)
-App.run()
+App().run()
 
