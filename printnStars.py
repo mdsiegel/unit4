@@ -3,7 +3,7 @@
 #printnStars.py - making stars
 
 def printnStars(num):
-    for i in range (0,num):
+    for i in range (1,num+1):
         print('*' * i)
         
 printnStars(6)
