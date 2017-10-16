@@ -13,4 +13,7 @@ def bigger(num1,num2):
         print(num2)
     
 bigger(-10,-27)
-    
+
+def slope(x1, y1, x2, y2):
+    print((y2-y1)/(x2-x1))
+slope(1,2,2,4)
