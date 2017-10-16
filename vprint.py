@@ -4,7 +4,7 @@
 
 def vprint(word):
     for ch in word:
-        print(ch.upper())
+        print(ch)
 
 vprint('matthew')
 
