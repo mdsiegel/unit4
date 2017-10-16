@@ -12,5 +12,5 @@ def bigger(num1,num2):
     else:
         print(num2)
     
-bigger(13,27)
+bigger(-10,-27)
     
