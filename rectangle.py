@@ -1,6 +1,6 @@
 #Matthew Siegel
 #10/16/17
-#funcitonDemo.py - learning functions
+#rectanlge.py - finding rectangles
 
 def rectangle(len,wid):
     print('There area is',len*wid)
