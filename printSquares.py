@@ -3,9 +3,7 @@
 #printSquares.py - Makes a bunch of boxes
 
 def printSquares(hight,width):
-    print('+--+--+--+--+')
-    print('|  |  |  |  |')
-    print('+--+--+--+--+')
+    for i in range(1,
 
 printSquares(1,2)
     
