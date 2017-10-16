@@ -8,3 +8,5 @@ def countdownn(num):
         print(i)
         i -=1
     print('BOOM!')
+
+countdownn(5)
