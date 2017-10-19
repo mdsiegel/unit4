@@ -21,6 +21,6 @@ if __name__ == '__main__':
     
     Sprite(jungleBox)
     Sprite(monkeyBox)
-    Sprite(bananaBox)
+    Sprite(bananaBox,(COLLS*CELL_SIZE/2,ROWS*CELL_SIZE/2))
     
     App().run()
