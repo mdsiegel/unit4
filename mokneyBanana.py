@@ -33,7 +33,7 @@ if __name__ == '__main__':
     
     Sprite(jungleBox)
     monkey = Sprite(monkeyBox)
-    Sprite(bananaBox,(COLLS*CELL_SIZE/2,ROWS*CELL_SIZE/2))
+    banana = Sprite(bananaBox,(COLLS*CELL_SIZE/2,ROWS*CELL_SIZE/2))
     
     
     App().listenKeyEvent('keydown','right arrow', moveRight)
