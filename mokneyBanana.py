@@ -34,6 +34,9 @@ def moveBanana():
     banana.x = randint(0,COLLS-1)*CELL_SIZE
     banana.y = randint(0,ROWS-1)*CELL_SIZE
     
+def updateScore():
+    
+    
 
 if __name__ == '__main__':
     
