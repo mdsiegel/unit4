@@ -8,6 +8,8 @@ ROWS = 30
 COLLS = 50
 CELL_SIZE = 20
 
+def moveRight(event):
+    monkey.x +=CELL_SIZE
 
 if __name__ == '__main__':
     
