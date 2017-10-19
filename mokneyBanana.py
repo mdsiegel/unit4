@@ -10,3 +10,6 @@ if __name__ == '__main__':
     
     jungleBox = RectangleAsset(800,600,LineStyle(1,green),green)
     
+    Sprite(jungleBox)
+    
+    App().run()
