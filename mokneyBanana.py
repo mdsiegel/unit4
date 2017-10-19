@@ -4,4 +4,7 @@
 
 from ggame import *
 
-
+if __name__ == '__main__':
+    
+    green = Color(0x006600,1)
+    
