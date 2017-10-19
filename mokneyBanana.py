@@ -10,6 +10,12 @@ CELL_SIZE = 20
 
 def moveRight(event):
     monkey.x +=CELL_SIZE
+def moveLeft(event):
+    monkey.x -=CELL_SIZE
+def moveUP(event):
+    monkey.y +=CELL_SIZE
+def moveDown(event):
+    monkey.y -=CELL_SIZE
 
 if __name__ == '__main__':
     
@@ -27,4 +33,10 @@ if __name__ == '__main__':
     
     
     App().listenKeyEvent('keydown','right arrow', moveRight)
+    App().listenKeyEvent('keydown','left arrow', moveLeft)
+    App().listenKeyEvent('keydown','up arrow', moveUp)
+    App().listenKeyEvent('keydown','down arrow', moveDown)
+
+
+
     App().run()
