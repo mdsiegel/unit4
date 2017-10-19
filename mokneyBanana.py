@@ -12,10 +12,10 @@ def moveRight(event):
     monkey.x +=CELL_SIZE
 def moveLeft(event):
     monkey.x -=CELL_SIZE
-def moveUP(event):
-    monkey.y +=CELL_SIZE
-def moveDown(event):
+def moveUp(event):
     monkey.y -=CELL_SIZE
+def moveDown(event):
+    monkey.y +=CELL_SIZE
 
 if __name__ == '__main__':
     
