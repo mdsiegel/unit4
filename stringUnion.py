@@ -7,11 +7,18 @@ def stringUnion(str1,str2):
     totalStr += str1
         
     totalStr +=str2
+    finalStr = ''
     for ch in totalStr:
-        
+        if ch in str1:
+            if not ch in finalStr:
+                finalStr += ch
+        if ch in str2:
+            if not ch in finalStr:
+                finalStr+= ch
             
-    return totalStr
+            
+    return finalStr
     
-print(stringUnion('hi','hey'))
+print(stringUnion('mississippi','pennsyvania'))
     
 
