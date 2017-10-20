@@ -57,7 +57,7 @@ def step():
     if data['frames'] == 200:
         moveBanana()
 
-#Checks if 
+#Checks if it is the main code
 if __name__ == '__main__':
     
     data= {}
