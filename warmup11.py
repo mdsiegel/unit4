@@ -7,9 +7,8 @@ def isPrime(n):
         for i in range(2,n):
             if n%i == 0:
                 return False
-            else:
-                return True
+        return True    
     else:
         return True
-print(isPrime(5))
+print(isPrime(29))
 
