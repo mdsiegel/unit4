@@ -11,4 +11,4 @@ def isPrime(n):
                 return True
     else:
         return True
-print(isPrime(0))
+print(isPrime(5))
