@@ -12,3 +12,4 @@ def isPrime(n):
     else:
         return True
 print(isPrime(5))
+
