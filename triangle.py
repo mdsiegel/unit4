@@ -10,11 +10,8 @@ x3 = float(input('Enter the x3 value: '))
 y3 = float(input('Enter the y3 value: '))
 
 def distance(x1,y1,x2,y2):
-    a = ((x2-x1)**2+(y2-y1)**2)**(1/2)
-    return a
-def distance(x1,y1,x2,y2):
-    b = ((x3-x2)**2+(y3-y2)**2)**(1/2)
-    return b
-def distance(x1,y1,x2,y2):
-    c = ((x3-x1)**2+(y3-y1)**2)**(1/2)
-    return b
+    distance = ((x2-x1)**2+(y2-y1)**2)**(1/2)
+    return distance
+a = distance(x1,y1,x2,y2)
+b = distance(x2,y2,x3,y3)
+c = distance(x1,y1,x3,y3)
