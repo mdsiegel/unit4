@@ -10,5 +10,5 @@ def isPrime(n):
         return True    
     else:
         return True
-print(isPrime(29))
+print(isPrime(9))
 
