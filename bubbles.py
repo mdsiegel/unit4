@@ -16,10 +16,13 @@ def bubble():
     if randnum == 1:
         circle = CircleAsset(randint(20,100), blackOutline, red)
     elif randnum == 2:
-        circle = CircleAsset(randint(20,100), blackOutline, red)
+        circle = CircleAsset(randint(20,100), blackOutline, blue)
     elif randnum == 3:
-        circle = CircleAsset(randint(20,100), blackOutline, red)
+        circle = CircleAsset(randint(20,100), blackOutline, green)
     elif randnum == 4:
-        circle = CircleAsset(randint(20,100), blackOutline, red)
+        circle = CircleAsset(randint(20,100), blackOutline, black)
+        
+bubble()
+App().run()
 
     
