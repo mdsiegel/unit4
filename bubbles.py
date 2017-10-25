@@ -15,12 +15,14 @@ def bubble():
     randnum = randint(1,4)
     if randnum == 1:
         circle = CircleAsset(randint(20,100), blackOutline, red)
+        
     elif randnum == 2:
         circle = CircleAsset(randint(20,100), blackOutline, blue)
     elif randnum == 3:
         circle = CircleAsset(randint(20,100), blackOutline, green)
     elif randnum == 4:
         circle = CircleAsset(randint(20,100), blackOutline, black)
+    Sprite(circle,(randint(20,300),randint(20,300)))
         
 bubble()
 App().run()
