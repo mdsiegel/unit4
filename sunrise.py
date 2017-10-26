@@ -2,18 +2,17 @@
 #10/25/17
 #sunrise.py - making a sunrise
 
-def step():
-    ball.y +=3
+from ggame import *
 
-if __name__ == '__main__':
-    yellow = Color(0xFDB813,1)
-    yellowOutline = LineStyle(1,yellow) #pixels,color
+def step():
+    ball.y -=3
+
+yellow = Color(0xFDB813,1)
+yellowOutline = LineStyle(1,yellow) #pixels,color
     
-    circle = CircleAsset(50, yellowOutline, yellow)
-    ball = Sprite(circle,(20,20))
+circle = CircleAsset(100, yellowOutline, yellow)
+ball = Sprite(circle,(500,800))
     
-    data = {}
-    data['directionx'] = 20
-    data['directiony'] = 20
+
     
-    App().run(step)
+App().run(step)
