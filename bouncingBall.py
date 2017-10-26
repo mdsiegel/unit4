@@ -17,16 +17,17 @@ def step():
     ball.x+=data['directionx']
     ball.y+=data['directiony']
 
-green = Color(0x00FF00,1)
-black = Color(0x000000,1)
-blackOutline = LineStyle(1,black) #pixels,color
-
-circle = CircleAsset(50, blackOutline, green)
-ball = Sprite(circle,(20,20))
-
-data = {}
-data['directionx'] = 20
-data['directiony'] = 20
-
-App().run(step)
+if __name__ == '__main__':
+    green = Color(0x00FF00,1)
+    black = Color(0x000000,1)
+    blackOutline = LineStyle(1,black) #pixels,color
+    
+    circle = CircleAsset(50, blackOutline, green)
+    ball = Sprite(circle,(20,20))
+    
+    data = {}
+    data['directionx'] = 20
+    data['directiony'] = 20
+    
+    App().run(step)
 
