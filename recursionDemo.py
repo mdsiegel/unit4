@@ -3,7 +3,11 @@
 #recursionDemo.py - a recursive version of a countain function
 
 def countdown(n):
-    print('Boom!')
+    if n == 0:
+        print('Boom!')
+    else:
+        print(n)
+        countdown(n-1)
     
 countdown(5)
 
