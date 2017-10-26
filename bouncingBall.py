@@ -6,13 +6,16 @@ from ggame import *
 from random import randint
 
 def step():
-    if ball.x == 1000:
+    if ball.x >= 1000:
         data['directionx']*=-1
-    if ball.y == 800:
+    if ball.y >= 600:
+        data['directiony']*=-1
+    if ball.x <= 0:
+        data['directionx']*=-1
+    if ball.y <= 0:
         data['directiony']*=-1
     ball.x+=data['directionx']
     ball.y+=data['directiony']
-    print('step')
 
 green = Color(0x00FF00,1)
 black = Color(0x000000,1)
@@ -22,8 +25,8 @@ circle = CircleAsset(50, blackOutline, green)
 ball = Sprite(circle,(20,20))
 
 data = {}
-data['directionx'] = 5
-data['directiony'] = 5
+data['directionx'] = 20
+data['directiony'] = 20
 
 App().run(step)
 
