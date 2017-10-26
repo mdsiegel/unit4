@@ -5,7 +5,7 @@
 from ggame import *
 
 def step():
-    ball.y -=3
+    ball.y -=1
 
 yellow = Color(0xFDB813,1)
 yellowOutline = LineStyle(1,yellow) #pixels,color
