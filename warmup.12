@@ -1,1 +1,10 @@
+#Matthew Siegel
+#10/27/17
+#warmup.py - GCF
+
+def GCF(num1,num2):
+    if num2>num1:
+        
+
+
 
