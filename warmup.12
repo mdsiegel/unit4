@@ -8,6 +8,6 @@ def GCF(num1,num2):
             return i
     
 
-print(GCF(10,15))
+print(GCF(14,7))
 
 
