@@ -2,38 +2,43 @@
 #10/27/17
 #pong.py
 
+
 from ggame import *
 from random import randint
 
-ROWS = 30
-COLLS = 50
-CELL_SIZE = 20
 
-
+def moveUp(event):
+    rightBoxS.y -=20
+def moveDown(event):
+    rightBoxS.y += 20
+def step():
+    if ball.x >= 1000:
+        data['directionx']*=-1
+    if ball.y >= 600:
+        data['directiony']*=-1
+    if ball.x <= 0:
+        data['directionx']*=-1
+    if ball.y <= 0:
+        data['directiony']*=-1
+    ball.x+=data['directionx']
+    ball.y+=data['directiony']
 
 if __name__ == '__main__':
+    green = Color(0x00FF00,1)
+    black = Color(0x000000,1)
+    blackOutline = LineStyle(1,black) #pixels,color
     
-    data= {}
-    data['score'] = 0
-    data['frames'] = 0
+    circle = CircleAsset(50, blackOutline, green)
+    leftBox = RectangleAsset(20,150,LineStyle(1,black),green)
+    leftBoxS = Sprite(leftBox)
+    rightBox = RectangleAsset(20,150,LineStyle(1,black),green)
+    rightBoxS = Sprite(rightBox,(1000,0))
+    ball = Sprite(circle,(20,20))
     
-    green = Color(0x006600,1)
-    brown = Color(0x8B4513,1)
-    yellow = Color(0xFFFF00,1)
     
-    leftBox = RectangleAsset(COLLS*CELL_SIZE,ROWS*CELL_SIZE,LineStyle(1,green),green)
-    rightBox = RectangleAsset(CELL_SIZE,CELL_SIZE,LineStyle(1,brown),brown)
-    ball = RectangleAsset(CELL_SIZE,CELL_SIZE,LineStyle(1,yellow),yellow)
-    data['scoreText'] = TextAsset('Score = 0')
+    data = {}
+    data['leftBoxx'] = leftBoxS.x
+    data['directionx'] = 10
+    data['directiony'] = 10
     
-    Sprite(jungleBox)
-    monkey = Sprite(monkeyBox)
-    banana = Sprite(bananaBox,(COLLS*CELL_SIZE/2,ROWS*CELL_SIZE/2))
-    Sprite(data['scoreText'],(0,ROWS*CELL_SIZE))
-    
-    App().listenKeyEvent('keydown','up arrow', moveUp)
-    App().listenKeyEvent('keydown','down arrow', moveDown)
-
-
-
     App().run(step)
