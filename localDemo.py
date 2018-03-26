@@ -6,6 +6,7 @@ def f():
     x = 77 #local variable
     y = 10 #local variable
     
-x = 5
+x = 2
 f()
 print(x)
+print(y)
