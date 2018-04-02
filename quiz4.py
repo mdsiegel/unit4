@@ -15,9 +15,19 @@ def excitedPrint(string):
 excitedPrint("hi")
 
 def firstLetter(string):
-    i = 1
     for ch in string:
-        if i == 1:
-            print(ch)
-        i+=1
-firstLetter("does this work")
+        return ch
+        
+print(firstLetter("cool"))
+
+def repeats(x,y,z):
+    if x == y :
+        return True
+    elif y == z:
+        return True
+    elif z == x :
+        return True
+    else:
+        return False
+        
+print(repeats("h","h",7))
