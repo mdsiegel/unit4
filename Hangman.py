@@ -25,12 +25,13 @@ if __name__ == '__main__':
     baseLine = LineAsset(300, 0, blackOutline)
     vertLine = LineAsset(0, -300, blackOutline)
     topLine = LineAsset(100, 0, blackOutline)
-    hangLine = LineAsset(0, 50, blackOutline)
+    hangLine = LineAsset(0, 60, blackOutline)
     
     Sprite(baseLine, (150,400))
     Sprite(vertLine, (300,100))
     Sprite(topLine, (300,100))
-    
+    Sprite(hangLine, (400,100))
+
     App().run()
     
     
