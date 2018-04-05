@@ -47,7 +47,19 @@ if __name__ == '__main__':
     App().listenKeyEvent('keydown','k', keyPress)
     App().listenKeyEvent('keydown','l', keyPress)
     App().listenKeyEvent('keydown','m', keyPress)
-    
+    App().listenKeyEvent('keydown','n', keyPress)
+    App().listenKeyEvent('keydown','o', keyPress)
+    App().listenKeyEvent('keydown','p', keyPress)
+    App().listenKeyEvent('keydown','q', keyPress)
+    App().listenKeyEvent('keydown','r', keyPress)
+    App().listenKeyEvent('keydown','s', keyPress)
+    App().listenKeyEvent('keydown','t', keyPress)
+    App().listenKeyEvent('keydown','u', keyPress)
+    App().listenKeyEvent('keydown','v', keyPress)
+    App().listenKeyEvent('keydown','w', keyPress)
+    App().listenKeyEvent('keydown','x', keyPress)
+    App().listenKeyEvent('keydown','y', keyPress)
+    App().listenKeyEvent('keydown','z', keyPress)
     
     
 
