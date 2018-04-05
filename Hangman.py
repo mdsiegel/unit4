@@ -25,6 +25,7 @@ def keyPress(event):
             for w in range(1,i):
                 if data[w] == event.key:
                     print(w)
+                    
             
             
     
