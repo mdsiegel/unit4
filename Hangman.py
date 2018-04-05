@@ -23,14 +23,15 @@ def keyPress(event):
         if event.key == ch:
             print("yay")
             
+            
     
 if __name__ == '__main__':
     data = {}
+    i = 1
     for ch in word:
-        i = 1
         data[i] = ch
-        i +=1
-    print(data["3"])
+        i += 1
+    print(data)
     black = Color(0x000000,1)
     blackOutline = LineStyle(4,black) 
     baseLine = LineAsset(300, 0, blackOutline)
