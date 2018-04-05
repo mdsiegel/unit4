@@ -21,7 +21,7 @@ def keyPress(event):
     
 if __name__ == '__main__':
     black = Color(0x000000,1)
-    blackOutline = LineStyle(1,black) 
+    blackOutline = LineStyle(4,black) 
     baseLine = LineAsset(50, 160, blackOutline)
     vertLine = LineAsset(50, 160, blackOutline)
     topLine = LineAsset(50, 160, blackOutline)
@@ -29,6 +29,6 @@ if __name__ == '__main__':
     
     Sprite(baseLine)
     
-    App.run()
+    App().run()
     
     
