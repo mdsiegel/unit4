@@ -25,6 +25,11 @@ def keyPress(event):
             
     
 if __name__ == '__main__':
+    data = {}
+    for ch in word:
+        i = 1
+        data[i] = ch
+        i +=1
     black = Color(0x000000,1)
     blackOutline = LineStyle(4,black) 
     baseLine = LineAsset(300, 0, blackOutline)
@@ -36,7 +41,10 @@ if __name__ == '__main__':
     Sprite(vertLine, (300,100))
     Sprite(topLine, (300,100))
     Sprite(hangLine, (400,100))
+    
    
+    
+    
     #Listening for any letter being pressed
     App().listenKeyEvent('keydown','a', keyPress)
     App().listenKeyEvent('keydown','b', keyPress)
