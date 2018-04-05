@@ -5,9 +5,9 @@
 from ggame import *
 
 black = Color(0x000000,1)
-
+word = "word"
 def pickWord():
-    return word == "word"
+    print("pick word")
 
 def wordComplete():
     print("You win")
@@ -18,7 +18,11 @@ def printHangman():
     
     
 def keyPress(event):
-    print("keypress")
+    print(event.key)
+    for ch in word:
+        if event.key == ch:
+            print("yay")
+            
     
 if __name__ == '__main__':
     black = Color(0x000000,1)
