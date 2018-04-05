@@ -40,12 +40,15 @@ if __name__ == '__main__':
     vertLine = LineAsset(0, -300, blackOutline)
     topLine = LineAsset(100, 0, blackOutline)
     hangLine = LineAsset(0, 60, blackOutline)
+    
+    letterLine = LineAsset(60, 0, blackOutline)
     #Spriting all the compoenents of the hangman board
     Sprite(baseLine, (150,400))
     Sprite(vertLine, (300,100))
     Sprite(topLine, (300,100))
     Sprite(hangLine, (400,100))
-    
+    for x in range(0,i-1):
+        Sprite(letterLine, (300 + (x*100),500))
    
     
     
