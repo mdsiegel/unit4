@@ -7,9 +7,10 @@ from ggame import *
 black = Color(0x000000,1)
 
 def pickWord():
-    word == "word"
+    return word == "word"
 
 def wordComplete():
+    print("You win")
     return True
     
 def printHangman():
@@ -26,11 +27,29 @@ if __name__ == '__main__':
     vertLine = LineAsset(0, -300, blackOutline)
     topLine = LineAsset(100, 0, blackOutline)
     hangLine = LineAsset(0, 60, blackOutline)
-    
+    #Spriting all the compoenents of the hangman board
     Sprite(baseLine, (150,400))
     Sprite(vertLine, (300,100))
     Sprite(topLine, (300,100))
     Sprite(hangLine, (400,100))
+   
+    #Listening for any letter being pressed
+    App().listenKeyEvent('keydown','a', keyPress)
+    App().listenKeyEvent('keydown','b', keyPress)
+    App().listenKeyEvent('keydown','c', keyPress)
+    App().listenKeyEvent('keydown','d', keyPress)
+    App().listenKeyEvent('keydown','e', keyPress)
+    App().listenKeyEvent('keydown','f', keyPress)
+    App().listenKeyEvent('keydown','g', keyPress)
+    App().listenKeyEvent('keydown','h', keyPress)
+    App().listenKeyEvent('keydown','i', keyPress)
+    App().listenKeyEvent('keydown','j', keyPress)
+    App().listenKeyEvent('keydown','k', keyPress)
+    App().listenKeyEvent('keydown','l', keyPress)
+    App().listenKeyEvent('keydown','m', keyPress)
+    
+    
+    
 
     App().run()
     
