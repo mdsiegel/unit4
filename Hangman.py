@@ -27,5 +27,8 @@ if __name__ == '__main__':
     topLine = LineAsset(50, 160, blackOutline)
     hangLine = LineAsset(50, 160, blackOutline)
     
+    Sprite(baseLine)
+    
+    App.run()
     
     
