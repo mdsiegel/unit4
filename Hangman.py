@@ -30,6 +30,7 @@ if __name__ == '__main__':
         i = 1
         data[i] = ch
         i +=1
+    print(data["3"])
     black = Color(0x000000,1)
     blackOutline = LineStyle(4,black) 
     baseLine = LineAsset(300, 0, blackOutline)
