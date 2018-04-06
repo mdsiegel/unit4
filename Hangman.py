@@ -64,12 +64,12 @@ if __name__ == '__main__':
     Sprite(topLine, (300,100))  
     Sprite(hangLine, (400,100))
     
-    Sprite(head,(370,150))
-    Sprite(body,(400,210))
-    Sprite(leftLeg,(400,309))
-    Sprite(rightLeg,(340,309))
-    Sprite(leftArm,(400,250))
-    Sprite(rightArm,(330,250))
+   # Sprite(head,(370,150))
+   # Sprite(body,(400,210))
+  #  Sprite(leftLeg,(400,309))
+   # Sprite(rightLeg,(340,309))
+   # Sprite(leftArm,(400,250))
+   # Sprite(rightArm,(330,250))
     
 
     for x in range(0,i-1):
