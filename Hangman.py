@@ -42,13 +42,15 @@ if __name__ == '__main__':
     for ch in word:
         data[i] = ch
         i += 1
+    
     black = Color(0x000000,1)
+    white = Color(0xFFFFFF,1)
     blackOutline = LineStyle(4,black) 
     baseLine = LineAsset(300, 0, blackOutline)
     vertLine = LineAsset(0, -300, blackOutline)
     topLine = LineAsset(100, 0, blackOutline)
     hangLine = LineAsset(0, 60, blackOutline)
-    head = CircleAsset(50, blackOutline, black)
+    head = CircleAsset(30, blackOutline, white)
     body = LineAsset(0, -100, blackOutline)
     leftLeg = LineAsset(-100, -100, blackOutline)
     rightLeg = LineAsset(100, 100, blackOutline)
@@ -59,8 +61,10 @@ if __name__ == '__main__':
     #Spriting all the compoenents of the hangman board
     Sprite(baseLine, (150,400))
     Sprite(vertLine, (300,100))
-    Sprite(topLine, (300,100))
+    Sprite(topLine, (300,100))  
     Sprite(hangLine, (400,100))
+    
+    Sprite(head,(370,150))
     
 
     for x in range(0,i-1):
