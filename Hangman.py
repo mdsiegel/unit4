@@ -54,7 +54,7 @@ if __name__ == '__main__':
     body = LineAsset(0, -100, blackOutline)
     leftLeg = LineAsset(-60, -70, blackOutline)
     rightLeg = LineAsset(60, -70, blackOutline)
-    leftArm = LineAsset(-100, -100, blackOutline)
+    leftArm = LineAsset(-70, -60, blackOutline)
     rightArm = LineAsset(100, -100, blackOutline)
     
     letterLine = LineAsset(60, 0, blackOutline)
@@ -68,6 +68,8 @@ if __name__ == '__main__':
     Sprite(body,(400,210))
     Sprite(leftLeg,(400,309))
     Sprite(rightLeg,(340,309))
+    Sprite(leftArm,(400,250))
+    Sprite(leftArm,(400,250))
     
 
     for x in range(0,i-1):
