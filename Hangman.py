@@ -17,7 +17,7 @@ def wordComplete():
         return False
     
 def printHangman():
-    print("hangman")
+    Sprite(head,(370,150))
     
     
 def keyPress(event):
@@ -29,6 +29,7 @@ def keyPress(event):
                 if data[w] == event.key:
                     print(w)
                     addLetter(event.key, w)
+    printHangman()
                     
                 
                     
@@ -66,11 +67,10 @@ if __name__ == '__main__':
     
    # Sprite(head,(370,150))
    # Sprite(body,(400,210))
-  #  Sprite(leftLeg,(400,309))
+   # Sprite(leftLeg,(400,309))
    # Sprite(rightLeg,(340,309))
    # Sprite(leftArm,(400,250))
    # Sprite(rightArm,(330,250))
-    
 
     for x in range(0,i-1):
         Sprite(letterLine, (300 + (x*100),500))
@@ -78,7 +78,7 @@ if __name__ == '__main__':
     def addLetter(letter, x):
         text = TextAsset(letter,fill=black,style='bold 40pt Times')
         Sprite(text, (300+((x-.85)*100),450))
-    
+
     
     #Listening for any letter being pressed
     App().listenKeyEvent('keydown','a', keyPress)
