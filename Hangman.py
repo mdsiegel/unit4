@@ -52,7 +52,6 @@ if __name__ == '__main__':
     Sprite(hangLine, (400,100))
     for x in range(0,i-1):
         Sprite(letterLine, (300 + (x*100),500))
-        data["letterx":x+1] = 300 + (x*100)
     print(data)
     def addLetter(letter, x):
         text = TextAsset(letter,fill=black,style='bold 40pt Times')
