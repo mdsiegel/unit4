@@ -52,8 +52,8 @@ if __name__ == '__main__':
     hangLine = LineAsset(0, 60, blackOutline)
     head = CircleAsset(30, blackOutline, white)
     body = LineAsset(0, -100, blackOutline)
-    leftLeg = LineAsset(-100, -100, blackOutline)
-    rightLeg = LineAsset(100, 100, blackOutline)
+    leftLeg = LineAsset(-60, -70, blackOutline)
+    rightLeg = LineAsset(60, -70, blackOutline)
     leftArm = LineAsset(-100, -100, blackOutline)
     rightArm = LineAsset(100, -100, blackOutline)
     
@@ -66,6 +66,8 @@ if __name__ == '__main__':
     
     Sprite(head,(370,150))
     Sprite(body,(400,210))
+    Sprite(leftLeg,(400,309))
+    Sprite(rightLeg,(340,309))
     
 
     for x in range(0,i-1):
