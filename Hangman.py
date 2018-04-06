@@ -29,6 +29,7 @@ def keyPress(event):
                 if data[w] == event.key:
                     print(w)
                     addLetter(event.key, w)
+                    
                 
                     
             
@@ -59,6 +60,7 @@ if __name__ == '__main__':
         Sprite(letterLine, (300 + (x*100),500))
     print(data)
     def addLetter(letter, x):
+        lettersLeft -= 1
         text = TextAsset(letter,fill=black,style='bold 40pt Times')
         Sprite(text, (300+((x-.85)*100),450))
     
