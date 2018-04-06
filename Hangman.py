@@ -29,7 +29,7 @@ def keyPress(event):
                 if data[w] == event.key:
                     print(w)
                     addLetter(event.key, w)
-    printHangman()
+   
                     
                 
                     
@@ -64,7 +64,6 @@ if __name__ == '__main__':
     Sprite(vertLine, (300,100))
     Sprite(topLine, (300,100))  
     Sprite(hangLine, (400,100))
-    
    # Sprite(head,(370,150))
    # Sprite(body,(400,210))
    # Sprite(leftLeg,(400,309))
