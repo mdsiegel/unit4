@@ -42,7 +42,6 @@ if __name__ == '__main__':
     for ch in word:
         data[i] = ch
         i += 1
-    lettersLeft = i
     black = Color(0x000000,1)
     blackOutline = LineStyle(4,black) 
     baseLine = LineAsset(300, 0, blackOutline)
@@ -60,7 +59,6 @@ if __name__ == '__main__':
         Sprite(letterLine, (300 + (x*100),500))
     print(data)
     def addLetter(letter, x):
-        lettersLeft -= 1
         text = TextAsset(letter,fill=black,style='bold 40pt Times')
         Sprite(text, (300+((x-.85)*100),450))
     
