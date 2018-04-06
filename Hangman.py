@@ -10,8 +10,11 @@ def pickWord():
     print("pick word")
 
 def wordComplete():
-    print("You win")
-    return True
+    if lettersLeft == 0:
+        print("You win")
+        return True
+    else:
+        return False
     
 def printHangman():
     print("hangman")
