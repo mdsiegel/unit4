@@ -34,9 +34,11 @@ def keyPress(event):
 if __name__ == '__main__':
     data = {}
     i = 1
+    
     for ch in word:
         data[i] = ch
         i += 1
+    lettersLeft = i
     black = Color(0x000000,1)
     blackOutline = LineStyle(4,black) 
     baseLine = LineAsset(300, 0, blackOutline)
