@@ -25,7 +25,7 @@ def keyPress(event):
             for w in range(1,i):
                 if data[w] == event.key:
                     print(w)
-                    addLetter(event.key, 
+                    addLetter(event.key, w)
                 
                     
             
@@ -37,9 +37,6 @@ if __name__ == '__main__':
     for ch in word:
         data[i] = ch
         i += 1
-    def addLetter(letter, x):
-        text = TextAsset(letter,fill=black,style='bold 40pt Times')
-        Sprite(text, (data["letter spot": x]))
     black = Color(0x000000,1)
     blackOutline = LineStyle(4,black) 
     baseLine = LineAsset(300, 0, blackOutline)
@@ -55,9 +52,11 @@ if __name__ == '__main__':
     Sprite(hangLine, (400,100))
     for x in range(0,i-1):
         Sprite(letterLine, (300 + (x*100),500))
-        data["letter spot":x] = (300 + (x*100),500)
+        data["letterx":x+1] = 300 + (x*100)
     print(data)
-   
+    def addLetter(letter, x):
+        text = TextAsset(letter,fill=black,style='bold 40pt Times')
+        Sprite(text, (data["letterx": x],500))
     
     
     #Listening for any letter being pressed
