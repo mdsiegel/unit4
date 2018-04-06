@@ -65,6 +65,7 @@ if __name__ == '__main__':
     Sprite(hangLine, (400,100))
     
     Sprite(head,(370,150))
+    Sprite(body,(400,210))
     
 
     for x in range(0,i-1):
