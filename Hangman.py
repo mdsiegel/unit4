@@ -56,7 +56,7 @@ if __name__ == '__main__':
     print(data)
     def addLetter(letter, x):
         text = TextAsset(letter,fill=black,style='bold 40pt Times')
-        Sprite(text, (300+(x*100),500))
+        Sprite(text, (300+((x-.85)*100),450))
     
     
     #Listening for any letter being pressed
