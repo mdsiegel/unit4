@@ -55,7 +55,7 @@ if __name__ == '__main__':
     leftLeg = LineAsset(-60, -70, blackOutline)
     rightLeg = LineAsset(60, -70, blackOutline)
     leftArm = LineAsset(-70, -60, blackOutline)
-    rightArm = LineAsset(100, -100, blackOutline)
+    rightArm = LineAsset(70, -60, blackOutline)
     
     letterLine = LineAsset(60, 0, blackOutline)
     #Spriting all the compoenents of the hangman board
@@ -69,7 +69,7 @@ if __name__ == '__main__':
     Sprite(leftLeg,(400,309))
     Sprite(rightLeg,(340,309))
     Sprite(leftArm,(400,250))
-    Sprite(leftArm,(400,250))
+    Sprite(rightArm,(330,250))
     
 
     for x in range(0,i-1):
