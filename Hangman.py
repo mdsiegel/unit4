@@ -50,6 +50,8 @@ if __name__ == '__main__':
     Sprite(hangLine, (400,100))
     for x in range(0,i-1):
         Sprite(letterLine, (300 + (x*100),500))
+        data["letter spot":x] = (300 + (x*100),500)
+    print(data)
    
     
     
