@@ -3,14 +3,30 @@
 #Hangman.py - hangman game
 
 from ggame import *
+from random import randint
 
 black = Color(0x000000,1)
-word = "word"
+
 def pickWord():
+    num = randint(1,5)
+    print(num)
+    if num == 1:
+        data["word"] = "tennis"
+    if num == 2:
+        data["word"] = "skiing"
+    if num == 3:
+        data["word"] = "momento"
+    if num == 4:
+        data["word"] = "coffee" 
+    if num == 5:
+        data["word"] = "unzip"
+    else:
+        data["word"] = "wrong"
     print("pick word")
+    print(data["word"])
 
 def wordComplete():
-    for ch in word:
+    for ch in data["word"]:
             if ch not in data["guessed"]:
                 return False
     return True
@@ -22,8 +38,8 @@ def printHangman():
 def keyPress(event):
     data["guessed"] += event.key
     print(event.key)
-    if event.key in word:
-        for ch in word:
+    if event.key in data["word"]:
+        for ch in data["word"]:
             if event.key == ch:
                 print("yay")
                 for w in range(1,i):
@@ -58,8 +74,10 @@ if __name__ == '__main__':
     data = {}
     data["guessed"] = ""
     data["wrong"] = 0
+    data["word"] = ""
+    pickWord()
     i = 1
-    for ch in word:
+    for ch in data["word"]:
         data[i] = ch
         i += 1
     
