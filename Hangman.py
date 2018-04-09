@@ -10,26 +10,44 @@ def pickWord():
     print("pick word")
 
 def wordComplete():
-    if lettersLeft == 0:
-        print("You win")
-        return True
-    else:
-        return False
+    for ch in word:
+            if ch not in data["guessed"]:
+                return False
+    return True
     
 def printHangman():
     Sprite(head,(370,150))
     
     
 def keyPress(event):
+    data["guessed"] += event.key
     print(event.key)
-    for ch in word:
-        if event.key == ch:
-            print("yay")
-            for w in range(1,i):
-                if data[w] == event.key:
-                    print(w)
-                    addLetter(event.key, w)
-   
+    if event.key in word:
+        for ch in word:
+            if event.key == ch:
+                print("yay")
+                for w in range(1,i):
+                    if data[w] == event.key:
+                        print(w)
+                        addLetter(event.key, w)
+        if wordComplete() == True:
+            print("YOU WIN")
+                
+    else:
+        data["wrong"] += 1
+        if data["wrong"] == 1:
+            Sprite(head,(370,150))
+        if data["wrong"] == 2:
+            Sprite(body,(400,210))
+        if data["wrong"] == 3:
+            Sprite(leftLeg,(400,309))
+        if data["wrong"] == 4:
+            Sprite(rightLeg,(340,309))
+        if data["wrong"] == 5:
+            Sprite(leftArm,(400,250))
+        if data["wrong"] == 6:
+            Sprite(rightArm,(330,250))
+            print("YOU LOSE")
                     
                 
                     
@@ -38,8 +56,9 @@ def keyPress(event):
     
 if __name__ == '__main__':
     data = {}
+    data["guessed"] = ""
+    data["wrong"] = 0
     i = 1
-    
     for ch in word:
         data[i] = ch
         i += 1
