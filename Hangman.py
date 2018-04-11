@@ -20,8 +20,7 @@ def pickWord():
         data["word"] = "coffee" 
     if num == 5:
         data["word"] = "unzip"
-    else:
-        data["word"] = "wrong"
+    
     print("pick word")
     print(data["word"])
 
