@@ -9,7 +9,7 @@ black = Color(0x000000,1)
 
 def pickWord():
     num = randint(1,5)
-    print(num)
+   # print(num)
     if num == 1:
         data["word"] = "tennis"
     if num == 2:
@@ -21,8 +21,8 @@ def pickWord():
     if num == 5:
         data["word"] = "unzip"
     
-    print("pick word")
-    print(data["word"])
+ #   print("pick word")
+  #  print(data["word"])
 
 def wordComplete():
     for ch in data["word"]:
@@ -37,17 +37,17 @@ def printHangman():
 def keyPress(event):
     if event.key not in data["guessed"]:
         data["guessed"] += event.key
-        print(event.key)
+      #  print(event.key)
         if event.key in data["word"]:
             for ch in data["word"]:
                 if event.key == ch:
-                    print("yay")
+                  #  print("yay")
                     for w in range(1,i):
                         if data[w] == event.key:
-                            print(w)
+                          #  print(w)
                             addLetter(event.key, w)
             if wordComplete() == True:
-                print("YOU WIN")
+             #   print("YOU WIN")
                 Sprite(winText,(330,250))
                 
         else:
@@ -67,7 +67,7 @@ def keyPress(event):
                 Sprite(leftArm,(400,250))
             if data["wrong"] == 6:
                 Sprite(rightArm,(330,250))
-                print("YOU LOSE")
+         #       print("YOU LOSE")
                 Sprite(loseText,(330,250))
     else:
         print("Pick another letter, you already guessed that")
@@ -121,7 +121,7 @@ if __name__ == '__main__':
 
     for x in range(0,i-1):
         Sprite(letterLine, (300 + (x*100),500))
-    print(data)
+ #   print(data)
     def addLetter(letter, x):
         text = TextAsset(letter,fill=black,style='bold 40pt Times')
         Sprite(text, (300+((x-.85)*100),450))
