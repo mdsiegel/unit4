@@ -52,6 +52,9 @@ def keyPress(event):
                 
         else:
             data["wrong"] += 1
+            data["wrongLetters"] += event.key
+            lettersText = TextAsset(data["wrongLetters"],fill=black,style='bold 20pt Times')
+            Sprite(lettersText,(800,250))
             if data["wrong"] == 1:
                 Sprite(head,(370,150))
             if data["wrong"] == 2:
@@ -79,6 +82,7 @@ if __name__ == '__main__':
     data["guessed"] = ""
     data["wrong"] = 0
     data["word"] = ""
+    data["wrongLetters"] = ""
     pickWord()
     i = 1
     for ch in data["word"]:
@@ -100,6 +104,7 @@ if __name__ == '__main__':
     rightArm = LineAsset(70, -60, blackOutline)
     winText = TextAsset('YOU WIN!!!',fill=black,style='bold 40pt Times')
     loseText = TextAsset('YOU LOSE',fill=black,style='bold 40pt Times')
+    lettersText = TextAsset('',fill=black,style='bold 15pt Times')
     
     letterLine = LineAsset(60, 0, blackOutline)
     #Spriting all the compoenents of the hangman board
