@@ -52,7 +52,7 @@ def keyPress(event):
                 
         else:
             data["wrong"] += 1
-            data["wrongLetters"] += event.key
+            data["wrongLetters"] += " " + event.key
             lettersText = TextAsset(data["wrongLetters"],fill=black,style='bold 20pt Times')
             Sprite(lettersText,(800,250))
             if data["wrong"] == 1:
