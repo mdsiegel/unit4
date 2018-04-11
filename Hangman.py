@@ -6,6 +6,9 @@ from ggame import *
 from random import randint
 
 black = Color(0x000000,1)
+red = Color(0xFF0000,1)
+blue = Color(0x0000FF,1)
+
 
 def pickWord():
     num = randint(1,5)
@@ -102,8 +105,8 @@ if __name__ == '__main__':
     rightLeg = LineAsset(60, -70, blackOutline)
     leftArm = LineAsset(-70, -60, blackOutline)
     rightArm = LineAsset(70, -60, blackOutline)
-    winText = TextAsset('YOU WIN!!!',fill=black,style='bold 40pt Times')
-    loseText = TextAsset('YOU LOSE',fill=black,style='bold 40pt Times')
+    winText = TextAsset('YOU WIN!!!',fill=blue,style='bold 40pt Times')
+    loseText = TextAsset('YOU LOSE',fill=red,style='bold 40pt Times')
     lettersText = TextAsset('',fill=black,style='bold 15pt Times')
     
     letterLine = LineAsset(60, 0, blackOutline)
@@ -112,12 +115,7 @@ if __name__ == '__main__':
     Sprite(vertLine, (300,100))
     Sprite(topLine, (300,100))  
     Sprite(hangLine, (400,100))
-   # Sprite(head,(370,150))
-   # Sprite(body,(400,210))
-   # Sprite(leftLeg,(400,309))
-   # Sprite(rightLeg,(340,309))
-   # Sprite(leftArm,(400,250))
-   # Sprite(rightArm,(330,250))
+
 
     for x in range(0,i-1):
         Sprite(letterLine, (300 + (x*100),500))
