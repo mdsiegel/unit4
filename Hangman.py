@@ -52,6 +52,7 @@ def keyPress(event):
             if wordComplete() == True:
              #   print("YOU WIN")
                 Sprite(winText,(330,250))
+                data["gameOver"] = True
                 
         else:
             data["wrong"] += 1
@@ -72,6 +73,7 @@ def keyPress(event):
                 Sprite(rightArm,(330,250))
          #       print("YOU LOSE")
                 Sprite(loseText,(330,250))
+                data["gameOver"] = True
     else:
         print("Pick another letter, you already guessed that")
                     
@@ -86,6 +88,7 @@ if __name__ == '__main__':
     data["wrong"] = 0
     data["word"] = ""
     data["wrongLetters"] = ""
+    data["gameOver"] = False
     pickWord()
     i = 1
     for ch in data["word"]:
@@ -124,34 +127,34 @@ if __name__ == '__main__':
         text = TextAsset(letter,fill=black,style='bold 40pt Times')
         Sprite(text, (300+((x-.85)*100),450))
 
-    
-    #Listening for any letter being pressed
-    App().listenKeyEvent('keydown','a', keyPress)
-    App().listenKeyEvent('keydown','b', keyPress)
-    App().listenKeyEvent('keydown','c', keyPress)
-    App().listenKeyEvent('keydown','d', keyPress)
-    App().listenKeyEvent('keydown','e', keyPress)
-    App().listenKeyEvent('keydown','f', keyPress)
-    App().listenKeyEvent('keydown','g', keyPress)
-    App().listenKeyEvent('keydown','h', keyPress)
-    App().listenKeyEvent('keydown','i', keyPress)
-    App().listenKeyEvent('keydown','j', keyPress)
-    App().listenKeyEvent('keydown','k', keyPress)
-    App().listenKeyEvent('keydown','l', keyPress)
-    App().listenKeyEvent('keydown','m', keyPress)
-    App().listenKeyEvent('keydown','n', keyPress)
-    App().listenKeyEvent('keydown','o', keyPress)
-    App().listenKeyEvent('keydown','p', keyPress)
-    App().listenKeyEvent('keydown','q', keyPress)
-    App().listenKeyEvent('keydown','r', keyPress)
-    App().listenKeyEvent('keydown','s', keyPress)
-    App().listenKeyEvent('keydown','t', keyPress)
-    App().listenKeyEvent('keydown','u', keyPress)
-    App().listenKeyEvent('keydown','v', keyPress)
-    App().listenKeyEvent('keydown','w', keyPress)
-    App().listenKeyEvent('keydown','x', keyPress)
-    App().listenKeyEvent('keydown','y', keyPress)
-    App().listenKeyEvent('keydown','z', keyPress)
+    if data["gameOver"] == False:
+        #Listening for any letter being pressed
+        App().listenKeyEvent('keydown','a', keyPress)
+        App().listenKeyEvent('keydown','b', keyPress)
+        App().listenKeyEvent('keydown','c', keyPress)
+        App().listenKeyEvent('keydown','d', keyPress)
+        App().listenKeyEvent('keydown','e', keyPress)
+        App().listenKeyEvent('keydown','f', keyPress)
+        App().listenKeyEvent('keydown','g', keyPress)
+        App().listenKeyEvent('keydown','h', keyPress)
+        App().listenKeyEvent('keydown','i', keyPress)
+        App().listenKeyEvent('keydown','j', keyPress)
+        App().listenKeyEvent('keydown','k', keyPress)
+        App().listenKeyEvent('keydown','l', keyPress)
+        App().listenKeyEvent('keydown','m', keyPress)
+        App().listenKeyEvent('keydown','n', keyPress)
+        App().listenKeyEvent('keydown','o', keyPress)
+        App().listenKeyEvent('keydown','p', keyPress)
+        App().listenKeyEvent('keydown','q', keyPress)
+        App().listenKeyEvent('keydown','r', keyPress)
+        App().listenKeyEvent('keydown','s', keyPress)
+        App().listenKeyEvent('keydown','t', keyPress)
+        App().listenKeyEvent('keydown','u', keyPress)
+        App().listenKeyEvent('keydown','v', keyPress)
+        App().listenKeyEvent('keydown','w', keyPress)
+        App().listenKeyEvent('keydown','x', keyPress)
+        App().listenKeyEvent('keydown','y', keyPress)
+        App().listenKeyEvent('keydown','z', keyPress)
     
     
 
