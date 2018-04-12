@@ -126,13 +126,14 @@ if __name__ == '__main__':
     def addLetter(letter, x):
         text = TextAsset(letter,fill=black,style='bold 40pt Times')
         Sprite(text, (300+((x-.85)*100),450))
-
-    if data["gameOver"] == False:
-        #Listening for any letter being pressed
-        print(data)
-        abc = "abcdefghijklmnopqrstuvwxyz"
-        for ch in abc:
-            App().listenKeyEvent('keydown',ch, keyPress)
+    def keys():
+        if data["gameOver"] == False:
+            #Listening for any letter being pressed
+            abc = "abcdefghijklmnopqrstuvwxyz"
+            for ch in abc:
+                App().listenKeyEvent('keydown',ch, keyPress)
+        else:
+            
         
         """App().listenKeyEvent('keydown','a', keyPress)
         App().listenKeyEvent('keydown','b', keyPress)
@@ -163,6 +164,6 @@ if __name__ == '__main__':
     """
     
 
-    App().run()
+    App().run(keys)
     
     
