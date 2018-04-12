@@ -129,7 +129,12 @@ if __name__ == '__main__':
 
     if data["gameOver"] == False:
         #Listening for any letter being pressed
-        App().listenKeyEvent('keydown','a', keyPress)
+        print(data)
+        abc = "abcdefghijklmnopqrstuvwxyz"
+        for ch in abc:
+            App().listenKeyEvent('keydown',ch, keyPress)
+        
+        """App().listenKeyEvent('keydown','a', keyPress)
         App().listenKeyEvent('keydown','b', keyPress)
         App().listenKeyEvent('keydown','c', keyPress)
         App().listenKeyEvent('keydown','d', keyPress)
@@ -155,7 +160,7 @@ if __name__ == '__main__':
         App().listenKeyEvent('keydown','x', keyPress)
         App().listenKeyEvent('keydown','y', keyPress)
         App().listenKeyEvent('keydown','z', keyPress)
-    
+    """
     
 
     App().run()
