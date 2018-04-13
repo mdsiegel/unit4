@@ -38,44 +38,45 @@ def printHangman():
     
     
 def keyPress(event):
-    if event.key not in data["guessed"]:
-        data["guessed"] += event.key
+    if data["gameOver"] == False:
+        if event.key not in data["guessed"]:
+            data["guessed"] += event.key
       #  print(event.key)
-        if event.key in data["word"]:
-            for ch in data["word"]:
-                if event.key == ch:
+            if event.key in data["word"]:
+                for ch in data["word"]:
+                    if event.key == ch:
                   #  print("yay")
-                    for w in range(1,i):
-                        if data[w] == event.key:
+                        for w in range(1,i):
+                            if data[w] == event.key:
                           #  print(w)
-                            addLetter(event.key, w)
-            if wordComplete() == True:
+                                addLetter(event.key, w)
+                if wordComplete() == True:
              #   print("YOU WIN")
-                Sprite(winText,(330,250))
-                data["gameOver"] = True
+                    Sprite(winText,(330,250))
+                    data["gameOver"] = True
                 
-        else:
-            data["wrong"] += 1
-            data["wrongLetters"] += " " + event.key
-            lettersText = TextAsset(data["wrongLetters"],fill=black,style='bold 20pt Times')
-            Sprite(lettersText,(800,250))
-            if data["wrong"] == 1:
-                Sprite(head,(370,150))
-            if data["wrong"] == 2:
-                Sprite(body,(400,210))
-            if data["wrong"] == 3:
-                Sprite(leftLeg,(400,309))
-            if data["wrong"] == 4:
-                Sprite(rightLeg,(340,309))
-            if data["wrong"] == 5:
-                Sprite(leftArm,(400,250))
-            if data["wrong"] == 6:
-                Sprite(rightArm,(330,250))
+            else:
+                data["wrong"] += 1
+                data["wrongLetters"] += " " + event.key
+                lettersText = TextAsset(data["wrongLetters"],fill=black,style='bold 20pt Times')
+                Sprite(lettersText,(800,250))
+                if data["wrong"] == 1:
+                    Sprite(head,(370,150))
+                if data["wrong"] == 2:
+                    Sprite(body,(400,210))
+                if data["wrong"] == 3:
+                    Sprite(leftLeg,(400,309))
+                if data["wrong"] == 4:
+                    Sprite(rightLeg,(340,309))
+                if data["wrong"] == 5:
+                    Sprite(leftArm,(400,250))
+                if data["wrong"] == 6:
+                    Sprite(rightArm,(330,250))
          #       print("YOU LOSE")
-                Sprite(loseText,(330,250))
-                data["gameOver"] = True
-    else:
-        print("Pick another letter, you already guessed that")
+                    Sprite(loseText,(330,250))
+                    data["gameOver"] = True
+        else:
+            print("Pick another letter, you already guessed that")
                     
                 
                     
@@ -132,36 +133,10 @@ if __name__ == '__main__':
             abc = "abcdefghijklmnopqrstuvwxyz"
             for ch in abc:
                 App().listenKeyEvent('keydown',ch, keyPress)
-        else:
+  
             
         
-        """App().listenKeyEvent('keydown','a', keyPress)
-        App().listenKeyEvent('keydown','b', keyPress)
-        App().listenKeyEvent('keydown','c', keyPress)
-        App().listenKeyEvent('keydown','d', keyPress)
-        App().listenKeyEvent('keydown','e', keyPress)
-        App().listenKeyEvent('keydown','f', keyPress)
-        App().listenKeyEvent('keydown','g', keyPress)
-        App().listenKeyEvent('keydown','h', keyPress)
-        App().listenKeyEvent('keydown','i', keyPress)
-        App().listenKeyEvent('keydown','j', keyPress)
-        App().listenKeyEvent('keydown','k', keyPress)
-        App().listenKeyEvent('keydown','l', keyPress)
-        App().listenKeyEvent('keydown','m', keyPress)
-        App().listenKeyEvent('keydown','n', keyPress)
-        App().listenKeyEvent('keydown','o', keyPress)
-        App().listenKeyEvent('keydown','p', keyPress)
-        App().listenKeyEvent('keydown','q', keyPress)
-        App().listenKeyEvent('keydown','r', keyPress)
-        App().listenKeyEvent('keydown','s', keyPress)
-        App().listenKeyEvent('keydown','t', keyPress)
-        App().listenKeyEvent('keydown','u', keyPress)
-        App().listenKeyEvent('keydown','v', keyPress)
-        App().listenKeyEvent('keydown','w', keyPress)
-        App().listenKeyEvent('keydown','x', keyPress)
-        App().listenKeyEvent('keydown','y', keyPress)
-        App().listenKeyEvent('keydown','z', keyPress)
-    """
+    
     
 
     App().run(keys)
