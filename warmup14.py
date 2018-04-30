@@ -4,15 +4,17 @@
 
 name = input('What is your first and last name: ').split(' ')
 
-i = 0
+i = True
 for w in name[0]:
-    if i == 0:
+    if i == True:
         firstInitial = w
+    i = False
 
-b = 0
+b = True
 for ch in name[1]:
-    if b == 0:
+    if b == True:
         firstInitial = ch
+    b = False
         
 print(w,ch)
 
