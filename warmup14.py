@@ -7,5 +7,5 @@ name = input('What is your first and last name: ').split(' ')
 firstInitial = (name[0])[0]
 secondInitial = (name[1])[0]
         
-print(firstInitial,'.',secondInitial)
+print(firstInitial+'.'+secondInitial)
 
