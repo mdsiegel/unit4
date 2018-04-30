@@ -5,14 +5,14 @@
 from ggame import *
 from random import randint
 
-ANTS = 10
+ANTS = 100
 WIDTH = 600
 HEIGHT = 400
 
 def step():
     for ant in data['antList']:
-        ant.x +=1
-        ant.y +=1
+        ant.x += randint(-4,3)
+        ant.y += randint(-4,3)
 
 if __name__ == '__main__':
     
