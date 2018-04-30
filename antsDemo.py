@@ -9,6 +9,11 @@ ANTS = 10
 WIDTH = 600
 HEIGHT = 400
 
+def step():
+    for ant in data['antList']:
+        ant.x +=1
+        ant.y +=1
+
 if __name__ == '__main__':
     
     data = {}
